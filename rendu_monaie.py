@@ -12,9 +12,9 @@ Use input () function to get a user entry
 somme = input("Insérez vitre billet")
 """
 
-somme = 20
-achat1 = 3*1
-achat2 = 2*1.15
+somme = 200
+achat1 = 3*10
+achat2 = 2*18
 rendu = somme - (achat1 + achat2)
 billet100 = rendu // 100
 reste100 = rendu % 100
@@ -57,3 +57,23 @@ if piece2 > 0:
     print("La machine vous rend", piece2, "piece de 2€")
 else:
     print()
+
+
+listeBillet = [billet100,billet50,billet20,billet10,billet5,piece2]
+listeChaine = ["","","","","",""]
+listeMonnaie = [100,50,20,10,5,2]
+
+for i in range(6) :
+    if listeBillet[i] == 1:
+        listeChaine[i] = str(listeBillet[i]) + " billet de " + str(listeMonnaie[i]) + "€."
+    elif listeBillet[i] == 0:
+        listeChaine[i] = ""
+    else : 
+        listeChaine[i] = str(listeBillet[i]) + " billets de " + str(listeMonnaie[i]) + "€."
+
+print("Je vous rend :")
+for i in range(6):
+    if listeChaine[i] != "":
+        print(listeChaine[i])
+
+print("Merci !")
