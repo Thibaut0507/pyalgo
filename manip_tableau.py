@@ -7,13 +7,15 @@
 
 #Déclaration du tableau de démonstration
 
-monTablo = [15, 3, 25, 12, 7, -15, 45, -25, 0, 14, -78, 21, 1]
+monTablo = [15, 3, 25, 12, 7, -15, 45, -25, 71, 14, -78, 21, 1]
 
 #
 # Simple poor loop
 #
 for indice, val in enumerate(monTablo):
     print(monTablo[indice]*2)
+
+print("*****************")
 
 # More complex loop with condition
 for indice, val in enumerate(monTablo):
@@ -26,6 +28,8 @@ for val in monTablo:
     if indice % 2 == 0:
         print(monTablo[indice] * 2)
     indice = indice + 1
+
+print("*****************")
 
 # Trouver la valeur la plus petite du tableau
 initiale = monTablo[0]
