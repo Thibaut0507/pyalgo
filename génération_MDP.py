@@ -42,9 +42,17 @@ while len(password) < longueur:
     password.append(random.choice(ajout))
 print(password)
 
-"""
-finalPassword = []
+finalPassword = [""] * len(password)
 while len(password) > 0:
-    finalPassword.append(random.choice(password))
+    for j in range(len(password)):
+        ajout2 = random.randint(0, len(password)-1)
+        finalPassword [j] = password[ajout2]
+        password.remove(password[ajout2])
 print(finalPassword)
-"""
+
+mdp = ""
+for h in range(longueur):
+   mdp = mdp + str(finalPassword[h])
+print("***************************************")
+print(" Votre mot de passe est : ",mdp)
+print("***************************************")
