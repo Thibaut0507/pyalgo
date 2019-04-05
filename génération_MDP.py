@@ -50,9 +50,9 @@ while len(password) > 0:
         password.remove(password[ajout2])
 print(finalPassword)
 
-mdp = ""
+mdp = "" # Créer une chaine de caractère vide
 for h in range(longueur):
-   mdp = mdp + str(finalPassword[h])
+   mdp = mdp + str(finalPassword[h]) # Converti 1 à 1 les valeurs du tableau en caractère
 print("***************************************")
 print(" Votre mot de passe est : ",mdp)
 print("***************************************")
