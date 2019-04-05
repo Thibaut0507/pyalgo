@@ -19,14 +19,23 @@ majuscule = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N
 chiffre = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 ponctuation = ['*', ',', ';', '/', '+', '-', ')', '(', '[', ']']
 
+# Détermination de la longueur du mot de passe 
+
 longueur = random.randint(8, 12)
 print(longueur)
+
+# Détermination des caractères obligatoires
+    # 1 majuscule 
+    # 1 chiffre
+    # 1 élément de ponctuation 
 
 theMaj = random.choice(majuscule)
 theChi = random.choice(chiffre)
 thePonct = random.choice(ponctuation)
 password = [theMaj, theChi, thePonct]
 print(password)
+
+# Détermination des autres élements du mot de passe 
 
 while len(password) < longueur:
     i = random.randint(0, 3)
@@ -42,7 +51,10 @@ while len(password) < longueur:
     password.append(random.choice(ajout))
 print(password)
 
-finalPassword = [""] * len(password)   # Pour mélanger facilement, peut aussi utiliser random.shuffle
+# Mélange des éléments du mot de passe de manière aléatoire 
+    # Pour mélanger facilement, peut aussi utiliser random.shuffle
+
+finalPassword = [""] * len(password)   
 while len(password) > 0:
     for j in range(len(password)):
         ajout2 = random.randint(0, len(password)-1)
@@ -50,7 +62,8 @@ while len(password) > 0:
         password.remove(password[ajout2])
 print(finalPassword)
 
-# print("".join(finalPassword))
+# Mise en forme pour afficher le mot de passe sous forme d'une chaine de caractères
+
 
 mdp = "" # Créer une chaine de caractère vide
 for h in range(longueur):
@@ -59,3 +72,6 @@ print("")
 print("***************************************")
 print(" Votre mot de passe est : ",mdp)
 print("***************************************")
+
+# On peut aussi utiliser la fonction join 
+    # print("".join(finalPassword))
