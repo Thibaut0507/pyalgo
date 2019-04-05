@@ -42,7 +42,7 @@ while len(password) < longueur:
     password.append(random.choice(ajout))
 print(password)
 
-finalPassword = [""] * len(password)
+finalPassword = [""] * len(password)   # Pour mélanger facilement, peut aussi utiliser random.shuffle
 while len(password) > 0:
     for j in range(len(password)):
         ajout2 = random.randint(0, len(password)-1)
@@ -50,9 +50,12 @@ while len(password) > 0:
         password.remove(password[ajout2])
 print(finalPassword)
 
+# print("".join(finalPassword))
+
 mdp = "" # Créer une chaine de caractère vide
 for h in range(longueur):
    mdp = mdp + str(finalPassword[h]) # Converti 1 à 1 les valeurs du tableau en caractère
+print("")
 print("***************************************")
 print(" Votre mot de passe est : ",mdp)
 print("***************************************")
